@@ -27,6 +27,10 @@
                     "match": "\\[|\\]"
                 },
                 {
+                    "name": "entity.name.reference.tenyr",
+                    "match": "@\\+?(\\.L\\w+|[_\\w&&\\D]\\w*)"
+                },
+                {
                     "name": "keyword.operator.binop.tenyr",
                     "match": "\\^\\^|[<>=]=|[|&]~?|<<|>>>?|[-+*<>^@]"
                 },
