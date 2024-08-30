@@ -41,6 +41,10 @@
                 {
                     "name": "keyword.control.tenyr",
                     "match": "\\billegal\\b"
+                },
+                {
+                    "name": "punctuation.separator",
+                    "match": ";"
                 }
             ]
         },
