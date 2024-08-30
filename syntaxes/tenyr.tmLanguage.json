@@ -6,6 +6,12 @@
             "include": "#keywords"
         },
         {
+            "include": "#other"
+        },
+        {
+            "include": "#chars"
+        },
+        {
             "include": "#strings"
         }
     ],
@@ -13,8 +19,68 @@
         "keywords": {
             "patterns": [
                 {
+                    "name": "keyword.operator.arrow.tenyr",
+                    "match": "->|<-"
+                },
+                {
+                    "name": "keyword.operator.bracket.tenyr",
+                    "match": "\\[|\\]"
+                },
+                {
+                    "name": "keyword.operator.binop.tenyr",
+                    "match": "\\^\\^|[<>=]=|[|&]~?|<<|>>>?|[-+*<>^@]"
+                },
+                {
+                    "name": "keyword.other.directive.tenyr",
+                    "match": "\\.(word|chars|global|set|zero)\\b"
+                },
+                {
                     "name": "keyword.control.tenyr",
-                    "match": "\\b(if|while|for|return)\\b"
+                    "match": "\\billegal\\b"
+                }
+            ]
+        },
+        "other": {
+            "patterns": [
+                {
+                    "name": "comment.line.number-sign",
+                    "begin": "#",
+                    "end": "$"
+                },
+                {
+                    "name": "entity.name.function.tenyr",
+                    "match": "^\\s*[_\\w&&\\D]\\w*\\s*:"
+                },
+                {
+                    "name": "entity.name.label.tenyr",
+                    "match": "^\\s*\\.L\\w+\\s*:"
+                },
+                {
+                    "name": "constant.numeric.tenyr",
+                    "match": "-?\\b(0x\\h+|0b[01]+|\\d+)\\b"
+                },
+                {
+                    "name": "variable.other.tenyr",
+                    "match": "\\$\\w+\\b"
+                },
+                {
+                    "name": "variable.language.register.tenyr",
+                    "match": "\\b([A-Pa-p])\\b"
+                }
+            ]
+        },
+        "chars": {
+            "name": "string.quoted.single.tenyr",
+            "begin": "'",
+            "end": "'",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.tenyr",
+                    "match": "\\\\[\\'\"0bfnrtv]"
+                },
+                {
+                    "name": "invalid.illegal",
+                    "match": "[^']{2,}"
                 }
             ]
         },
@@ -25,7 +91,7 @@
             "patterns": [
                 {
                     "name": "constant.character.escape.tenyr",
-                    "match": "\\\\."
+                    "match": "\\\\[\\'\"0bfnrtv]"
                 }
             ]
         }
