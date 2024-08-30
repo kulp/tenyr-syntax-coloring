@@ -1,25 +1,35 @@
 {
-  "name": "tenyr-syntax-coloring",
-  "displayName": "tenyr-syntax-coloring",
-  "description": "Colors tenyr assembly language",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.92.0"
-  },
-  "categories": [
-    "Programming Languages"
-  ],
-  "contributes": {
-    "languages": [{
-      "id": "tenyr",
-      "aliases": ["tenyr", "tenyr"],
-      "extensions": [".tas",".tenyr"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "tenyr",
-      "scopeName": "source.tenyr",
-      "path": "./syntaxes/tenyr.tmLanguage.json"
-    }]
-  }
+    "name": "tenyr-syntax-coloring",
+    "displayName": "tenyr-syntax-coloring",
+    "description": "Colors tenyr assembly language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.92.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "tenyr",
+                "aliases": [
+                    "tenyr",
+                    "tenyr"
+                ],
+                "extensions": [
+                    ".tas",
+                    ".tenyr"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "tenyr",
+                "scopeName": "source.tenyr",
+                "path": "./syntaxes/tenyr.tmLanguage.json"
+            }
+        ]
+    }
 }
